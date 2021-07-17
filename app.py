@@ -21,11 +21,11 @@ def predict():
     mar=request.form['marketing']
     st=request.form['state']
     a=[]
-    if(st=='Florida'or st=='florida'):
+    if(st=='Florida' or st=='florida' or st=='FLORIDA'):
         a=[1,0]
-    if(st=='California'or st=='california'):
+    if(st=='California' or st=='california' or st=='CALIFORNIA'):
         a=[0,0]
-    if(st=='New York'or st=='new york'):
+    if(st=='New York' or st=='new york' or st=='New york' or st=='newyork' or st=='NEW YORK' or st=='NEWYORK'):
         a=[0,1]
     prediction=model.predict([[float(rd),float(ad),float(mar),a[0],a[1]]])
     
