@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ML API</title>
+     </head>
+    <body>
+        <div class="container" >
+            <h1 align="center">Profit Prediction Analysis</h1>
+            <p align="center">Grocery Data Analysis is used to promote the profitable business by telling which product has more chances of being bought with the given item thus increasing sales.</p>
+
+            <form action="{{url_for('predict')}}" method="post">
+                <input type="text" name="rd" placeholder="R&D Spend" required="required" />
+                <input type="text" name="administration" placeholder="Administration" required="required" />
+                <input type="text" name="marketing" placeholder="Marketing Spend" required="required" />
+                <input type="text" name="state" placeholder="State1" required="required" />
+
+                <button type="submit" class="btn btn-primary btn-block btn-large" >Predict</button>
+            </form>
+            <br/>
+            <br/>
+            {{prediction_text}}
+        </div>
+    </body>
+</html>
